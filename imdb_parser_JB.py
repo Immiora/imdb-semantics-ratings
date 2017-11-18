@@ -24,7 +24,7 @@ def get_soup(id):
     return BeautifulSoup(page, 'html.parser')
 
 def check_good_dict(D):
-    return 'Good' if sum([len(i) for _,i in D.items()])/float(len(D.keys()))==len(D['ID']) else 'Bad'
+    return True if sum([len(i) for _,i in D.items()])/float(len(D.keys()))==len(D['ID']) else False
 
 ##
 
@@ -85,17 +85,9 @@ for i, id in enumerate(IDs[:1000]):
         pass
 
 ##
-check_good_dict(D)
+DF = pd.DataFrame(D) if check_good_dict(D) else None
 
-##
-
-DF = pd.DataFrame(D)
-
-##
-
-DF.to_csv('kaggle_1000.csv', sep=';', encoding='utf-8')
-
-
+if DF is not None: DF.to_csv('kaggle_1000.csv', sep=';', encoding='utf-8')
 
 ##
 
