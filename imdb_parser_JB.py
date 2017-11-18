@@ -68,7 +68,7 @@ for i, id in enumerate(IDs[:1000]):
         D['countries'].append(parse_country(soup, id))
         D['grosses'].append(parse_gross(soup, id))
         D['languages'].append(parse_language(soup, id))
-        D['releaseDates'].append(parse_releaseDate(soup))
+        D['releaseDates'].append(parse_releaseDate(soup, id))
         D['budget'].append(parse_budget(soup, id))
         D['ratings'].append(get_rating(soup, id))
         D['locations'].append(get_location(soup, id))
