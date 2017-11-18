@@ -105,9 +105,9 @@ DF = pd.DataFrame(D) if check_good_dict(D) else None
 save_data_frame(DF)
 
 ##
-import seaborn as sns
-df = pd.read_csv('kaggle_1000.csv', sep=';')
-sns.distplot(df['ratings'].dropna())
+# import seaborn as sns
+# df = pd.read_csv('kaggle_1000.csv', sep=';')
+# sns.distplot(df['ratings'].dropna())
 ## nan ratings for [310, 335, 416, 519, 534, 545, 610, 643, 719, 747, 772, 949, 966]
 
 ##
