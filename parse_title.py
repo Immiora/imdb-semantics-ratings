@@ -5,4 +5,8 @@ from utils import *
 def parse_title(xmlFile):
     title = xmlFile.find('title').text
     cleanTitle = remove_tags(title)
-    return cleanTitle.split()[0]
+    titleStr = cleanTitle.split()[0]
+    if titleStr == '':
+        return None
+
+    return titleStr
