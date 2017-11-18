@@ -13,4 +13,3 @@ def readIdsFromKaggle():
             words = line.split(',')
             IDs.append(words[1])
     return IDs
-    

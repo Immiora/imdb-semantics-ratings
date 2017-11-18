@@ -4,7 +4,6 @@ Main page
 
 Mate:
   tilte
-  imdbRating
   director
   writers
   #reviews
@@ -18,8 +17,9 @@ Csilla
   filmingLocations
   budget
   company
-  
-  
+
+Clara
+  imdbRating
 
 Julia:
   storyline
