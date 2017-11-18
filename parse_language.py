@@ -7,8 +7,9 @@ def parse_language(soup, id):
         for h4 in soup.find_all('h4'):
             if "Language:" in h4:
                 language = h4.findNext().text 
-
-        return language
+                return language
+        return None
+        
     except:
         print('Couldnt parse language for id ' + id)
         return None

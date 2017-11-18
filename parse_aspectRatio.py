@@ -7,6 +7,10 @@ def parse_aspectRatio(soup, id):
         for h4 in soup.find_all('h4'):
             if "Aspect Ratio:" in h4:
                 aspectRatio = float(h4.next_sibling.strip().split()[0])
-        return aspectRatio
+                return aspectRatio
+        return None
+    
     except:
         print("Couldnt parse aspect ratio (Csilla) for id " + id)
+        return None
+        
