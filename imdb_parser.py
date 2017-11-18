@@ -10,6 +10,7 @@ from parse_gross import *
 from parse_language import *
 from parser_rating import *
 from parse_location import *
+from parse_company import *
 from readIDfromKaggle import *
 import pandas as pd
  
@@ -26,6 +27,7 @@ languages = []
 releaseDates = []
 ratings = []
 locations = []
+companies = []
 
 
 i = 0
@@ -47,12 +49,14 @@ for id in raw_ids:
     languages.append(parse_language(soup, id))
     ratings.append(get_rating(soup, id))
     locations.append(get_location(soup, id))
+    companies.append(parse_company(soup, id))
     if i == 20:
         break
 
 dataFrame = pd.DataFrame({'id': ids, 'titles': titles,\
  'casts': casts, 'directors': directors, 'writers': writers,\
   'popularities': popularities, 'countries': countries, 'grosses': grosses,\
-  'languages':languages, 'ratings':ratings})
+  'languages':languages, 'ratings':ratings, 'locations': locations,\
+  'companies': companies})
 dataFrame.to_csv('attributes.csv', sep=';')
 
