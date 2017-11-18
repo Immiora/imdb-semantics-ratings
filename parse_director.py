@@ -3,6 +3,6 @@ from bs4 import BeautifulSoup
 from utils import *
 
 def parse_director(htmlFile):
-    directorLines = htmlFile.find_all('span', {'class': 'itemprop'})
-    for l in directorLines:
-        print(l)
+    directedByLine = htmlFile.find('meta', {'property': 'og:description'})['content']
+    return directedByLine[12:].split('.')[0]
+    
