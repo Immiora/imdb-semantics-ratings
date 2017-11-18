@@ -1,1 +1,8 @@
-parse additional attributes:   budget, mpaa rating, language, country, studio
+parse attributes:  
+
+imdbRating
+budget
+mpaa rating
+language
+country
+studio
