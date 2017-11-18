@@ -3,23 +3,10 @@ parse attributes:
 Main page
 
 Mate:
-<<<<<<< HEAD
   tilte - OK
   imdbRating - OK
   director - OK
   writers - OK
-=======
-
-  tilte
-  director
-  writers
-
-  ======
-
-  tilte - OK
-  director - OK
-  writers - progress
->>>>>>> f0fd16f5187eafd61ee389559bba55d4d64aba81
   #reviews
   popularity
   
@@ -32,13 +19,7 @@ Csilla
   company
 
 Clara
-<<<<<<< HEAD
   imdbRating
-=======
-  imdbRating - OK
-    country - in progress
-=======
->>>>>>> f0fd16f5187eafd61ee389559bba55d4d64aba81
   gross - OK
   
   
