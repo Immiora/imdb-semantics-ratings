@@ -2,9 +2,34 @@ parse attributes:
 
 Main page
 
-imdbRating
-budget
-mpaa rating
-language
-country
-studio
+Timar:
+  tilte
+  imdbRating
+  director
+  writers
+  #reviews
+  popularity
+  
+  country
+  language
+  releaseDate
+  filmingLocations
+  budget
+  company
+  
+  
+
+Julia:
+  storyline
+  keywords
+  tagline
+  genres
+  mpaa rating
+  cast
+  
+  runtime
+  color
+  aspectRatio
+ 
+  
+
