@@ -2,15 +2,11 @@ import urllib.request  as urllib2
 from bs4 import BeautifulSoup
 from utils import *
 
-def parse_popularity(xmlFile):
-    popDown = xmlFile.find('span', {'class': 'popularityDown'})
-    
-    # print(value)
-    # return value
-    # title = xmlFile.find('title').text
-    # cleanTitle = remove_tags(title)
-    # titleStr = cleanTitle[0:-14]
-    # if titleStr == '':
-    #     return None
-    
-    # return titleStr
+def parse_popularity(xmlFile, id):
+    popularityDownTag = xmlFile.find('span', {'class': 'popularityDown'})
+    try:
+        popularity = popularityDownTag.findPrevious().findPrevious().text.strip().split()[0]
+        return popularity
+    except:
+        print('Couldnt parse popularity for id ' + id)
+        return None

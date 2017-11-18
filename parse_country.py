@@ -2,9 +2,13 @@ import urllib.request  as urllib2
 from bs4 import BeautifulSoup
 from utils import *
 
-def parse_country(xmlFile):
-    for h4 in xmlFile.find_all('h4'):
-        if "Country:" in h4:
-            country = h4.findNext().text 
+def parse_country(xmlFile, id):
+    try:
+        for h4 in xmlFile.find_all('h4'):
+            if "Country:" in h4:
+                country = h4.findNext().text 
 
-    return country
+        return country
+    except:
+        print('Couldnt parse country for id ' + id)
+        return None
