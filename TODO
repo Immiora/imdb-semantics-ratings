@@ -12,14 +12,14 @@ Mate:
   
 
 Csilla
-  language
+  language - OK
   releaseDate - OK
-  filmingLocations
   budget - OK
   company
 
 Clara
-  imdbRating
+  imdbRating - OK
+  filmingLocations - in progress
   gross - OK
   
   
