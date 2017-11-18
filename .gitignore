@@ -1,2 +1,8 @@
 .vscode/settings.json
 .~lock.imdb.csv#
+__pycache__/utils.cpython-35.pyc
+__pycache__/parse_title.cpython-35.pyc
+__pycache__/readIDfromKaggle.cpython-35.pyc
+__pycache__/synopsis.cpython-35.pyc
+output.log
+__pycache__/parse_cast.cpython-35.pyc
