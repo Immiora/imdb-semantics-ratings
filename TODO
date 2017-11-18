@@ -3,9 +3,9 @@ parse attributes:
 Main page
 
 Mate:
-  tilte
-  imdbRating
-  director
+  tilte - OK
+  imdbRating 
+  director 
   writers
   #reviews
   popularity
@@ -16,21 +16,20 @@ Csilla
   language
   releaseDate
   filmingLocations
-  budget
+  budget - OK
   company
   
   
 
 Julia:
-  storyline
-  keywords
-  tagline
-  genres
+  storyline -OK
+  keywords - OK
+  genres - OK
   mpaa rating
   
-  runtime
-  color
-  aspectRatio
+  runtime - OK
+  color - OK
+  aspectRatio - OK
  
   
 
