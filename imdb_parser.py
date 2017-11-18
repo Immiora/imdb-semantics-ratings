@@ -1,9 +1,10 @@
-import urllib.request  as urllib2 
+import urllib.request as urllib2
 from bs4 import BeautifulSoup
 from parse_title import *
 from parse_cast import *
 from parse_director import *
 from parse_writers import *
+from parse_popularity import *
 from readIDfromKaggle import *
 import pandas as pd
  
@@ -19,6 +20,7 @@ titleStr = parse_title(xmlFile)
 parse_cast(xmlFile)
 print(parse_director(xmlFile))
 print(parse_writers(xmlFile))
+print(parse_popularity(xmlFile))
 print('title: ' + titleStr)
 titles.append(titleStr)
 

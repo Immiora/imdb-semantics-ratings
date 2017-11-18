@@ -4,29 +4,30 @@ Main page
 
 Mate:
   tilte - OK
-  imdbRating 
+  imdbRating - OK
   director - OK
-  writers - progress
+  writers - OK
   #reviews
   popularity
   
 
 Csilla
-  country
   language
   releaseDate - OK
   filmingLocations
   budget - OK
   company
+
+Clara
+  imdbRating
   gross - OK
   
   
-
 Julia:
   storyline -OK
   keywords - OK
   genres - OK
-  mpaa rating
+  mpaa rating - in progress
   
   runtime - OK
   color - OK
