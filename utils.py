@@ -6,4 +6,4 @@ def remove_tags(text):
     return TAG_RE.sub('', text)
 
 def id_to_main_page_url(id):
-    return 'http://www.imdb.com/title/' + id + '/?ref_=nv_sr_2'
+    return 'http://www.imdb.com/title/' + id + '/?ref_=tt_rec_tti'
