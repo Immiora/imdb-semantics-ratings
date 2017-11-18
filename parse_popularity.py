@@ -2,8 +2,8 @@ import urllib.request  as urllib2
 from bs4 import BeautifulSoup
 from utils import *
 
-def parse_popularity(xmlFile, id):
-    popularityDownTag = xmlFile.find('span', {'class': 'popularityDown'})
+def parse_popularity(soup, id):
+    popularityDownTag = soup.find('span', {'class': 'popularityDown'})
     try:
         popularity = popularityDownTag.findPrevious().findPrevious().text.strip().split()[0]
         return popularity

@@ -9,6 +9,7 @@ from parse_country import *
 from parse_gross import *
 from parse_language import *
 from parser_rating import *
+from parse_location import *
 from readIDfromKaggle import *
 import pandas as pd
  
@@ -24,6 +25,7 @@ grosses = []
 languages = []
 releaseDates = []
 ratings = []
+locations = []
 
 
 i = 0
@@ -32,18 +34,19 @@ for id in raw_ids:
     i = i + 1
     url = id_to_main_page_url(id)
     page = urllib2.urlopen(url)
-    xmlFile = BeautifulSoup(page, 'html.parser')
+    soup = BeautifulSoup(page, 'html.parser')
 
     ids.append(id)
-    titles.append(parse_title(xmlFile, id))
-    casts.append(parse_cast(xmlFile, id))
-    directors.append(parse_director(xmlFile, id))
-    writers.append(parse_writers(xmlFile, id))
-    popularities.append(parse_popularity(xmlFile, id))
-    countries.append(parse_country(xmlFile, id))
-    grosses.append(parse_gross(xmlFile, id))
-    languages.append(parse_language(xmlFile, id))
-    ratings.append(get_rating(xmlFile, id))
+    titles.append(parse_title(soup, id))
+    casts.append(parse_cast(soup, id))
+    directors.append(parse_director(soup, id))
+    writers.append(parse_writers(soup, id))
+    popularities.append(parse_popularity(soup, id))
+    countries.append(parse_country(soup, id))
+    grosses.append(parse_gross(soup, id))
+    languages.append(parse_language(soup, id))
+    ratings.append(get_rating(soup, id))
+    locations.append(get_location(soup, id))
     if i == 20:
         break
 
