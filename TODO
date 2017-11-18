@@ -8,7 +8,7 @@ Mate:
   director - OK
   writers - OK
   #reviews
-  popularity
+  popularity - OK
   
 
 Csilla
@@ -17,7 +17,8 @@ Csilla
   budget - OK
   country - OK
   gross - OK
-  company
+  company - OK
+  aspectRatio - OK
 
 Clara
   imdbRating
