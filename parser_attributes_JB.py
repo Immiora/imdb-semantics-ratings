@@ -20,6 +20,7 @@ def parse_storyline_attribute(xmlFile):
         out = xmlFile.find('div', attrs).text.replace('\n', '')
         return trim_spaces(out[:out.find('Written')]) if out != '' else None
     except:
+        print('Warning: attribute is None')
         return None
 
 def parse_keyword_attribute(xmlFile):
@@ -32,6 +33,7 @@ def parse_keyword_attribute(xmlFile):
         attrs = {'class': 'see-more inline canwrap', 'itemprop': 'keywords'}
         return [trim_spaces(i.get_text()) for i in xmlFile.find('div', attrs).find_all('a')][:-1]
     except:
+        print('Warning: attribute is None')
         return None
 
 
@@ -48,10 +50,11 @@ def parse_genre_attribute(xmlFile):
                   'Romance', 'Sci-Fi', 'Sport', 'Thriller', 'War', 'Western']
         attrs = {'class': 'see-more inline canwrap', 'itemprop': 'genre'}
         scraped = [trim_spaces(i.get_text()) for i in xmlFile.find('div', attrs).find_all('a')]
-        out = np.zeros((len(genres), len(scraped)), dtype=np.int16)
-        for i, si in enumerate(scraped): out[genres.index(si), i] = 1
+        out = np.zeros((len(genres),), dtype=np.int16)
+        for si in scraped: out[genres.index(si)] = 1
         return out if np.any(out) else None
     except:
+        print('Warning: attribute is None')
         return None
 
 
@@ -66,6 +69,7 @@ def parse_runtime_attribute(xmlFile):
         attrs = {'itemprop': 'duration'}
         return int(xmlFile.find('time', attrs)['datetime'][2:-1])
     except:
+        print('Warning: attribute is None')
         return None
 
 
@@ -85,6 +89,7 @@ def parse_color_attribute(xmlFile):
         for i, si in enumerate(idx): out[colors.index(trim_spaces(out2[si]))] = 1
         return out if np.any(out) else None
     except:
+        print('Warning: attribute is None')
         return None
 
 
@@ -99,6 +104,7 @@ def parse_aspect_ratio_attribute(xmlFile):
         out = trim_spaces(xmlFile.find('div', attrs).find_all('div')[-1].text).replace('\n', '').replace('Aspect Ratio: ', '')
         return float(trim_spaces(out[:out.find(':')])), float(trim_spaces(out[out.find(':')+1:])) if out != '' else None
     except:
+        print('Warning: attribute is None')
         return None
 
 
@@ -115,5 +121,6 @@ def parse_mpaa_attribute(xmlFile):
         idx = np.array([' ' + i + ' ' in out for i in mpaa], dtype=bool) * 1
         return idx if np.any(idx) else None
     except:
+        print('Warning: attribute is None')
         return None
 
