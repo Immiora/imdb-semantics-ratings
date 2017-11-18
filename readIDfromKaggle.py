@@ -6,7 +6,7 @@ def readIdsFromKaggle():
     IDs=[]
 
 
-    with open('imdb.csv') as f:
+    with open('imdb.csv', encoding='utf-8') as f:
         lines = f.readlines()
         for i in range(1, len(lines)):
             line = lines[i]
