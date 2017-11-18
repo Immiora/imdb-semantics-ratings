@@ -5,8 +5,8 @@ Main page
 Mate:
   tilte - OK
   imdbRating 
-  director 
-  writers
+  director - OK
+  writers - progress
   #reviews
   popularity
   
@@ -14,10 +14,11 @@ Mate:
 Csilla
   country
   language
-  releaseDate
+  releaseDate - OK
   filmingLocations
   budget - OK
   company
+  gross - OK
   
   
 
