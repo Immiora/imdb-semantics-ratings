@@ -9,3 +9,7 @@ __pycache__/parse_cast.cpython-35.pyc
 __pycache__/parse_director.cpython-35.pyc
 __pycache__/parse_popularity.cpython-35.pyc
 __pycache__/parse_writers.cpython-35.pyc
+__pycache__/parse_country.cpython-35.pyc
+__pycache__/parse_gross.cpython-35.pyc
+__pycache__/parse_language.cpython-35.pyc
+__pycache__/parser_rating.cpython-35.pyc
