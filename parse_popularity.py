@@ -3,8 +3,17 @@ from bs4 import BeautifulSoup
 from utils import *
 
 def parse_popularity(soup, id):
-    popularityDownTag = soup.find('span', {'class': 'popularityDown'})
+    
     try:
+        popularityDownTag = soup.find('span', {'class': 'popularityDown'})
+        popularity = popularityDownTag.findPrevious().findPrevious().text.strip().split()[0]
+        return popularity
+
+    except:
+        a=5
+
+    try:
+        popularityDownTag = soup.find('span', {'class': 'popularityUpOrFlat'})
         popularity = popularityDownTag.findPrevious().findPrevious().text.strip().split()[0]
         return popularity
     except:
