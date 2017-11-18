@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 from utils import *
 
 def parse_popularity(xmlFile):
-    value = xmlFile.find('span', {'class': 'subText'}).text
-    print(value)
-    return value
+    popDown = xmlFile.find('span', {'class': 'popularityDown'})
+    
+    # print(value)
+    # return value
     # title = xmlFile.find('title').text
     # cleanTitle = remove_tags(title)
     # titleStr = cleanTitle[0:-14]
