@@ -2,7 +2,7 @@ parse attributes:
 
 Main page
 
-Timar:
+Mate:
   tilte
   imdbRating
   director
@@ -10,6 +10,8 @@ Timar:
   #reviews
   popularity
   
+
+Csilla
   country
   language
   releaseDate
