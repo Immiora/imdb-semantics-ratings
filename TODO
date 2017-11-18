@@ -8,26 +8,33 @@ Mate:
   director - OK
   writers - OK
   #reviews
-  popularity
+  popularity - OK
   
 
 Csilla
-  language
+  language - OK
   releaseDate - OK
-  filmingLocations
   budget - OK
-  company
+  country - OK
+  gross - OK
+  company - OK
+  aspectRatio - OK
 
 Clara
-  imdbRating
+
+  imdbRating - OK
+  filmingLocations - OK
   gross - OK
-  
+=======
+  imdbRating
+  filmingLocations
+
   
 Julia:
   storyline -OK
   keywords - OK
   genres - OK
-  mpaa rating - in progress
+  mpaa rating - OK
   
   runtime - OK
   color - OK
