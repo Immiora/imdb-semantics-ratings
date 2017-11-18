@@ -3,37 +3,34 @@ parse attributes:
 Main page
 
 Mate:
-<<<<<<< HEAD
+
   tilte
   director
   writers
-=======
+
+  ======
+
   tilte - OK
-  imdbRating 
   director - OK
   writers - progress
->>>>>>> d8ce60e7b99c6b5800926671f48124baa1bbbcb8
   #reviews
   popularity
   
 
 Csilla
-  country
   language
   releaseDate - OK
   filmingLocations
   budget - OK
   company
-<<<<<<< HEAD
 
 Clara
-  imdbRating
+  imdbRating - OK
+    country - in progress
 =======
   gross - OK
   
   
->>>>>>> d8ce60e7b99c6b5800926671f48124baa1bbbcb8
-
 Julia:
   storyline -OK
   keywords - OK
