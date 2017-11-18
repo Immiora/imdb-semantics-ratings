@@ -1,4 +1,4 @@
-import urllib.request  as urllib2 
+import urllib.request as urllib2
 from bs4 import BeautifulSoup
 from parse_title import *
 from parse_cast import *
@@ -28,3 +28,7 @@ titles.append(titleStr)
 # dataFrame = pd.DataFrame({'titles': titles, 'id': ids})
 # dataFrame.to_csv('titles.csv', sep=';')
 
+<<<<<<< HEAD
+parse_budget()
+=======
+>>>>>>> d8ce60e7b99c6b5800926671f48124baa1bbbcb8
