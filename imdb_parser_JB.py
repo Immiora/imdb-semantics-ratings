@@ -67,7 +67,7 @@ D['colors'] = []
 D['aspectRatios'] = []
 D['mpaaRatings'] = []
 
-for i, id in enumerate(IDs[:10]):
+for i, id in enumerate(IDs):
     try:
         print(i)
         soup = get_soup(id)
