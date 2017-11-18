@@ -17,8 +17,6 @@ from parse_location import get_location
 from parse_company import parse_company
 from parse_releaseDate import parse_releaseDate
 from parse_budget import parse_budget
-
-from readIDfromKaggle import *
 from readIDfromKaggle import readIdsFromKaggle
 import pandas as pd
 
