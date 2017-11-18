@@ -3,9 +3,16 @@ parse attributes:
 Main page
 
 Mate:
+<<<<<<< HEAD
   tilte
   director
   writers
+=======
+  tilte - OK
+  imdbRating 
+  director - OK
+  writers - progress
+>>>>>>> d8ce60e7b99c6b5800926671f48124baa1bbbcb8
   #reviews
   popularity
   
@@ -13,24 +20,29 @@ Mate:
 Csilla
   country
   language
-  releaseDate
+  releaseDate - OK
   filmingLocations
-  budget
+  budget - OK
   company
+<<<<<<< HEAD
 
 Clara
   imdbRating
+=======
+  gross - OK
+  
+  
+>>>>>>> d8ce60e7b99c6b5800926671f48124baa1bbbcb8
 
 Julia:
-  storyline
-  keywords
-  tagline
-  genres
+  storyline -OK
+  keywords - OK
+  genres - OK
   mpaa rating
   
-  runtime
-  color
-  aspectRatio
+  runtime - OK
+  color - OK
+  aspectRatio - OK
  
   
 
