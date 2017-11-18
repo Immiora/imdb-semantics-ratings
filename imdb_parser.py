@@ -28,7 +28,3 @@ titles.append(titleStr)
 # dataFrame = pd.DataFrame({'titles': titles, 'id': ids})
 # dataFrame.to_csv('titles.csv', sep=';')
 
-<<<<<<< HEAD
-parse_budget()
-=======
->>>>>>> d8ce60e7b99c6b5800926671f48124baa1bbbcb8
