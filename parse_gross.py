@@ -6,9 +6,14 @@ def parse_gross(soup, id):
     try:
         for h4 in soup.find_all('h4'):
             if "Gross:" in h4:
-                gross = h4.next_sibling.strip()
-                return gross
-
+                grossStr = h4.next_sibling.strip()
+                if grossStr[0] == '$':
+                    gross = int(grossStr[1:].replace(',',''))
+                    return gross
+                else:
+                    gross = grossStr.replace(u'\xa0', u' ')
+                    return int(gross[gross.find(' ')+1:].replace(',', ''))
+        
         return None
     
     except:
