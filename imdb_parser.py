@@ -35,6 +35,7 @@ for id in raw_ids:
     print(i)
     i = i + 1
     url = id_to_main_page_url(id)
+    print(url)
     page = urllib2.urlopen(url)
     soup = BeautifulSoup(page, 'html.parser')
 
@@ -50,7 +51,7 @@ for id in raw_ids:
     ratings.append(get_rating(soup, id))
     locations.append(get_location(soup, id))
     companies.append(parse_company(soup, id))
-    if i == 20:
+    if i == 1:
         break
 
 dataFrame = pd.DataFrame({'id': ids, 'titles': titles,\

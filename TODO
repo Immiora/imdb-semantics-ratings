@@ -20,17 +20,14 @@ Csilla
   company - OK
   aspectRatio - OK
 
-Clara
-
+Clara:
+  0 to 4 000
   imdbRating - OK
   filmingLocations - OK
   gross - OK
-=======
-  imdbRating
-  filmingLocations
-
   
 Julia:
+  10 000 to 14 000
   storyline -OK
   keywords - OK
   genres - OK
@@ -40,5 +37,9 @@ Julia:
   color - OK
   aspectRatio - OK
  
-  
+ 
+ minsky: 3000:8000
+ stein:  0:3000
+ ein:    8000:11000
+ blue:   11000:14000 
 

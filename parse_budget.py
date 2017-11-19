@@ -11,7 +11,8 @@ def parse_budget(xmlFile, id):
                     budget = int(budgetStr[1:].replace(',',''))
                     return budget
                 else:
-                    return None
+                    budget = budgetStr.replace(u'\xa0', u' ')
+                    return int(budget[budget.find(' ')+1:].replace(',', ''))
         
         return None
        
@@ -19,3 +20,4 @@ def parse_budget(xmlFile, id):
     except:
         print('Could parse budget for id ' + id)
         return None
+
