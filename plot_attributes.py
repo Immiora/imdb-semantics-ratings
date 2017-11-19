@@ -6,9 +6,20 @@ import csv
 
 df = pd.read_csv('kaggle_attr6.csv', delimiter = ';')
 
-df.plot(x='deltaPopularities',y='ratings')  # plots all columns against index
-df.plot(kind='scatter',x='deltaPopularities',y='ratings') # scatter plot
-df.plot(kind='density',x='deltaPopularities',y='ratings')  # estimate density function
-df.plot(kind='hist', x='deltaPopularities',y='ratings')  # histogram
+
+#scatter plots
+df.plot(kind='scatter',x='budget',y='ratings', logx=True) #budget
+#df.plot(kind='scatter',x='gross', y='ratings', logx=True) # grosses
+df.plot(kind='scatter',x='deltaPopularities',y='ratings', logx=True) #delta popularities
+#df.plot(kind='scatter',x='popularities', y='ratings', logx=True) # popularities
+df.plot(kind='scatter',x='numberReviews',y='ratings', logx=True) #number of reviews
+df.plot(kind='scatter',x='releaseDates',y='ratings') #release dates
+df.plot(kind='scatter',x='blackWhite',y='ratings') #blackWhite
+df.plot(kind='scatter',x='durations',y='ratings',logx=True) #duration
+
+
+#density function and histogram of ratings
+df.plot(kind='density',y='ratings')  # estimate density function
+df.plot(kind='hist', y='ratings')  # histogram
 
 plt.show()

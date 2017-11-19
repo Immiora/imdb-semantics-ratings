@@ -6,7 +6,7 @@ def parse_popularity(soup, id):
     
     try:
         popularityDownTag = soup.find('span', {'class': 'popularityDown'})
-        popularity = popularityDownTag.findPrevious().findPrevious().text.strip().split()[0]
+        popularity = float(popularityDownTag.findPrevious().findPrevious().text.strip().split()[0])
         return popularity
 
     except:
@@ -14,7 +14,7 @@ def parse_popularity(soup, id):
 
     try:
         popularityDownTag = soup.find('span', {'class': 'popularityUpOrFlat'})
-        popularity = popularityDownTag.findPrevious().findPrevious().text.strip().split()[0]
+        popularity = float(popularityDownTag.findPrevious().findPrevious().text.strip().split()[0])
         return popularity
     except:
         print('Couldnt parse popularity for id ' + id)
