@@ -1,8 +1,9 @@
 
-files = ['new_IDs_start_151_end_244_12-00-00.txt',
-'new_IDs_start_101_end_150_12-00-00.txt',
-'new_IDs_start_51_end_100_12-00-00.txt',
-'new_IDs_start_0_end_50_12-00-00.txt']
+files = ['new_IDs_startyear_2001_endyear_2010_12-00-00.txt',
+'new_IDs_startyear_1990_endyear_2000_12-00-00.txt',
+'new_IDs_startyear_1980_endyear_1990_12-00-00.txt',
+'new_IDs_startyear_2010_endyear_2020_12-00-00.txt',
+'new_IDs.txt']
 
 fullList = []
 for fileName in files: 
@@ -16,6 +17,6 @@ for fileName in files:
 listAsSet = set(fullList)
 uniqueList = list(listAsSet)
 
-theFile = open('new_IDs.txt', 'w')
+theFile = open('new_IDs_2.txt', 'w')
 for id in uniqueList:
     theFile.write("%s\n" % id)
