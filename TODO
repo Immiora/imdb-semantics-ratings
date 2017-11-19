@@ -37,5 +37,9 @@ Julia:
   color - OK
   aspectRatio - OK
  
+ 
+ minsky: 3000:8000
+ stein:  0:3000
+ ein:    8000:11000
   
 
