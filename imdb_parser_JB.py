@@ -1,24 +1,10 @@
 import urllib.request  as urllib2 
 from bs4 import BeautifulSoup
 import os
-from parser_attributes_JB import *
-from parse_title import parse_title
-from parse_cast import parse_cast
-from parse_director import parse_director
-from parse_writers import parse_writers
-from parse_numOfReviews import parse_numOfReviews
-from parse_popularity import parse_popularity
-from parse_deltaPopularity import parse_deltaPopularity
-from parse_country import parse_country
-from parse_gross import parse_gross
-from parse_language import parse_language
-from parser_rating import get_rating
-from parse_location import get_location
-from parse_company import parse_company
-from parse_releaseDate import parse_releaseDate
-from parse_budget import parse_budget
+import parsers as prs
 from readIDfromKaggle import readIdsFromKaggle
 import pandas as pd
+
 
 def get_soup(id):
     quote_page = 'http://www.imdb.com/title/' + id + '/?ref_=nv_sr_2'
@@ -36,11 +22,11 @@ def save_data_frame(DF):
         DF.to_csv('kaggle_attr%s.csv' % i, sep=';', encoding='utf-8')
         print('Saved to ' + 'kaggle_attr%s.csv' % i)
 
-##
+
 
 IDs=readIdsFromKaggle()
 
-##
+
 
 D = {}
 D['IDs'] = []
@@ -67,38 +53,38 @@ D['colors'] = []
 D['aspectRatios'] = []
 D['mpaaRatings'] = []
 
-for i, id in enumerate(IDs):
+for i, id in enumerate(IDs[:3000]):
     try:
         print(i)
         soup = get_soup(id)
         D['IDs'].append(id)
-        D['titles'].append(parse_title(soup, id))
-        D['casts'].append(parse_cast(soup, id))
-        D['directors'].append(parse_director(soup, id))
-        D['writers'].append(parse_writers(soup, id))
-        D['popularities'].append(parse_popularity(soup, id))
-        D['deltaPopularities'].append(parse_deltaPopularity(soup, id))
-        D['numberReviews'].append(parse_numOfReviews(soup, id))
-        D['countries'].append(parse_country(soup, id))
-        D['grosses'].append(parse_gross(soup, id))
-        D['languages'].append(parse_language(soup, id))
-        D['releaseDates'].append(parse_releaseDate(soup, id))
-        D['budget'].append(parse_budget(soup, id))
-        D['ratings'].append(get_rating(soup, id))
-        D['locations'].append(get_location(soup, id))
-        D['companies'].append(parse_company(soup, id))
-        D['storylines'].append(parse_storyline_attribute(soup))
-        D['keywords'].append(parse_keyword_attribute(soup))
-        D['genres'].append(parse_genre_attribute(soup))
-        D['durations'].append(parse_runtime_attribute(soup))
-        D['colors'].append(parse_color_attribute(soup))
-        D['aspectRatios'].append(parse_aspect_ratio_attribute(soup))
-        D['mpaaRatings'].append(parse_mpaa_attribute(soup))
+        D['titles'].append(prs.parse_title(soup, id))
+        D['casts'].append(prs.parse_cast(soup, id))
+        D['directors'].append(prs.parse_director(soup, id))
+        D['writers'].append(prs.parse_writers(soup, id))
+        D['popularities'].append(prs.parse_popularity(soup, id))
+        D['deltaPopularities'].append(prs.parse_deltaPopularity(soup, id))
+        D['numberReviews'].append(prs.parse_numOfReviews(soup, id))
+        D['countries'].append(prs.parse_country(soup, id))
+        D['grosses'].append(prs.parse_gross(soup, id))
+        D['languages'].append(prs.parse_language(soup, id))
+        D['releaseDates'].append(prs.parse_releaseDate(soup, id))
+        D['budget'].append(prs.parse_budget(soup, id))
+        D['ratings'].append(prs.parse_rating(soup, id))
+        D['locations'].append(prs.parse_location(soup, id))
+        D['companies'].append(prs.parse_company(soup, id))
+        D['storylines'].append(prs.parse_storyline(soup))
+        D['keywords'].append(prs.parse_keyword(soup))
+        D['genres'].append(prs.parse_genre(soup))
+        D['durations'].append(prs.parse_runtime(soup))
+        D['colors'].append(prs.parse_color(soup))
+        D['aspectRatios'].append(prs.parse_aspect_ratio(soup))
+        D['mpaaRatings'].append(prs.parse_mpaa_rating(soup))
     except:
         print("Error with id " + id)
         pass
 
-##
+
 DF = pd.DataFrame(D) if check_good_dict(D) else None
 save_data_frame(DF)
 
